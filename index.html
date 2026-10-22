@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>regexbench — local regex workbench</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>regexbench</h1>
+    <p>Test regexes against sample text — live match highlighting, capture groups, and a plain-language explanation. Runs entirely in your browser; nothing is sent anywhere.</p>
+  </header>
+
+  <main>
+    <section class="controls">
+      <label>
+        Pattern
+        <input id="pattern" type="text" spellcheck="false" autocomplete="off" />
+      </label>
+      <label class="flags">
+        Flags
+        <input id="flags" type="text" spellcheck="false" autocomplete="off" placeholder="g" size="4" />
+      </label>
+      <span id="count" class="count">0 matches</span>
+      <span id="error" class="error" hidden></span>
+    </section>
+
+    <label>
+      Test text
+      <textarea id="input" rows="8" spellcheck="false"></textarea>
+    </label>
+
+    <section>
+      <h2>Matches</h2>
+      <pre id="highlight" class="highlight"></pre>
+    </section>
+
+    <section>
+      <h2>Capture groups</h2>
+      <div id="groups"></div>
+    </section>
+
+    <section>
+      <h2>What this pattern does</h2>
+      <div id="explain"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Zero dependencies · no network · MIT licensed</p>
+  </footer>
+
+  <script type="module" src="src/app.js"></script>
+</body>
+</html>

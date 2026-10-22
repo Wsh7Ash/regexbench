@@ -1,0 +1,14 @@
+{
+  "name": "regexbench",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Local in-browser regex workbench: live match highlighting, capture groups, and a plain-language explanation of the pattern. Zero dependencies, no network, no build step.",
+  "license": "MIT",
+  "scripts": {
+    "test": "node --test \"tests/**/*.test.mjs\""
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
